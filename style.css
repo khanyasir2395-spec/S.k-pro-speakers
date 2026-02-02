@@ -1,3 +1,47 @@
+/* BACKGROUND THEMES */
+.section-dark {
+  background: #0d0d0d;
+}
+
+.section-mid {
+  background: #111;
+}
+
+.section-light {
+  background: #f7f7f7;
+  color: #111;
+}
+
+.section-light h1,
+.section-light h2,
+.section-light h3 {
+  color: #111;
+}
+
+.section-light p {
+  color: #444;
+}
+.section-light .range-card,
+.section-light .quality-card,
+.section-light .testimonial-card {
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.section-light .range-card p,
+.section-light .quality-card p,
+.section-light .testimonial-card p {
+  color: #444;
+}
+@media (max-width: 768px) {
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+
 * {
   margin: 0;
   padding: 0;
