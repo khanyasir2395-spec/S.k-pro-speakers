@@ -1068,3 +1068,30 @@ body {
     font-size: 12px;
   }
 }
+/* =========================
+   HERO IMAGE – MOBILE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hero,
+  .about-hero {
+    min-height: 100vh;        /* full screen height */
+    height: auto;
+    padding-top: 120px;       /* space for navbar */
+    padding-bottom: 60px;
+    background-position: center top;
+    background-size: cover;
+  }
+
+}
+@media (max-width: 768px) {
+  .hero {
+    background-position: center center;
+  }
+}
+.hero {
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("assets/images/hero.jpg") center/cover no-repeat;
+}
