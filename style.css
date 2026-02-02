@@ -2240,3 +2240,77 @@ body {
     padding-bottom: 60px;
   }
 }
+/* =========================
+   MOBILE PROFESSIONAL TUNING
+   ========================= */
+@media (max-width: 768px) {
+
+  /* General spacing */
+  section {
+    padding: 60px 6%;
+  }
+
+  /* Headings scale */
+  h1 {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 26px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 36px !important;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  /* Cards spacing */
+  .buyer-card,
+  .range-card,
+  .trust-card,
+  .testimonial-card,
+  .quality-card {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  /* Grid tightening */
+  .buyer-grid,
+  .range-grid,
+  .trust-grid,
+  .testimonial-grid,
+  .quality-container {
+    gap: 20px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-container {
+    gap: 24px;
+  }
+
+}
