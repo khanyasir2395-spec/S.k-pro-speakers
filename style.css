@@ -2395,3 +2395,90 @@ body {
     bottom: 20px;
   }
 }
+:root {
+  --bg-main: #0e0e0e;
+  --bg-section: #151515;
+  --card-bg: #1d1d1d;
+  --text-main: #ffffff;
+  --text-soft: #cccccc;
+  --accent: #ff7a00;
+}
+
+body { background: var(--bg-main); color: var(--text-main); }
+
+section { background: var(--bg-section); }
+
+.buyer-card,
+.range-card,
+.trust-card,
+.testimonial-card,
+.quality-card {
+  background: var(--card-bg);
+}
+
+p { color: var(--text-soft); }
+
+.btn.primary { background: var(--accent); }
+:root {
+  --bg-main: #121212;
+  --bg-section: #1a1a1a;
+  --card-bg: #222222;
+  --text-main: #f5f5f5;
+  --text-soft: #bdbdbd;
+  --accent: #ff6a00;
+}
+
+body { background: var(--bg-main); color: var(--text-main); }
+section { background: var(--bg-section); }
+.buyer-card,
+.range-card,
+.trust-card,
+.testimonial-card,
+.quality-card { background: var(--card-bg); }
+p { color: var(--text-soft); }
+.btn.primary { background: var(--accent); }
+:root {
+  --bg-main: #0d0d0d;
+  --bg-section: #f6f5f2;
+  --card-bg: #ffffff;
+  --text-main: #111111;
+  --text-soft: #444444;
+  --accent: #ff7a00;
+}
+
+section.section-light,
+.buyer-filter,
+.skpro-range,
+.testimonials,
+.contact-details {
+  background: var(--bg-section);
+  color: var(--text-main);
+}
+
+.buyer-card,
+.range-card,
+.testimonial-card,
+.quality-card {
+  background: var(--card-bg);
+}
+
+p { color: var(--text-soft); }
+.btn.primary { background: var(--accent); }
+:root {
+  --bg-main: #0b0f14;
+  --bg-section: #111827;
+  --card-bg: #1f2933;
+  --text-main: #ffffff;
+  --text-soft: #c7d2da;
+  --accent: #3b82f6;
+}
+
+body { background: var(--bg-main); color: var(--text-main); }
+section { background: var(--bg-section); }
+.buyer-card,
+.range-card,
+.trust-card,
+.testimonial-card,
+.quality-card { background: var(--card-bg); }
+p { color: var(--text-soft); }
+.btn.primary { background: var(--accent); }
