@@ -1,3 +1,62 @@
+:root {
+  --bg-main: #0d0d0d;
+  --bg-section: #111111;
+  --bg-light: #f6f5f2;
+  --card-bg: #1a1a1a;
+
+  --text-main: #ffffff;
+  --text-dark: #111111;
+  --text-soft: #cccccc;
+
+  --accent: #ff7a00;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+section {
+  padding: 90px 8%;
+}
+.section-dark {
+  background: var(--bg-section);
+  color: var(--text-main);
+}
+
+.section-light {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.section-light h1,
+.section-light h2,
+.section-light h3 {
+  color: var(--text-dark);
+}
+
+.section-light p {
+  color: #444;
+}
+.section-light .range-card,
+.section-light .buyer-card,
+.section-light .trust-card,
+.section-light .testimonial-card,
+.section-light .quality-card {
+  background: #ffffff;
+  color: #111;
+}
+
+.section-dark .range-card,
+.section-dark .buyer-card,
+.section-dark .trust-card,
+.section-dark .testimonial-card,
+.section-dark .quality-card {
+  background: var(--card-bg);
+  color: var(--text-main);
+}
+
+
 /* BACKGROUND THEMES */
 .section-dark {
   background: #0d0d0d;
