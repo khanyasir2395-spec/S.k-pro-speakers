@@ -2314,3 +2314,84 @@ body {
   }
 
 }
+/* HERO SLIDER */
+.hero-slider {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Keep your existing hero styles */
+.hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 2;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 34px;
+  }
+  .hero-text p {
+    font-size: 15px;
+  }
+}
+/* HERO DOTS */
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.hero-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-dots .dot.active {
+  background: #ff7a00; /* SK Pro brand */
+  transform: scale(1.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-dots {
+    bottom: 20px;
+  }
+}

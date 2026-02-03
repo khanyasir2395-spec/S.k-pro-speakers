@@ -24,24 +24,56 @@
     </ul>
   </nav>
 
-  <div class="hero-overlay"></div>
+  <header class="hero hero-slider">
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Professional Sound<br>That Businesses Trust</h1>
-
-<p>
-Best-quality professional speakers at affordable prices.<br>
-Tested offline. Built for DJs & sound systems.
-</p>
-
-      
-      <span class="hero-note">
-        Offline demo & testing available at our Kolkata store
-      </span>
+  <div class="hero-slide active" style="background-image:url('assets/images/skpro-hero.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Powerful Sound.<br>Professional Performance.</h1>
+        <p>Built for DJs, sound owners, and event professionals.</p>
+      </div>
     </div>
   </div>
+
+  <div class="hero-slide" style="background-image:url('assets/images/slide2.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Strong Bass.<br>Clean Output.</h1>
+        <p>Tested speakers with real-world performance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image:url('assets/images/slide3.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Made for Business.</h1>
+        <p>Bulk supply with consistent sound quality.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="background-image:url('assets/images/slide4.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Trusted Offline.</h1>
+        <p>Live demo and testing at our Kolkata store.</p>
+      </div>
+    </div>
+  </div>
+<div class="hero-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
 </header>
+
 
 <section class="about-skpro-detail">
   <div class="detail-container">
@@ -326,6 +358,29 @@ Tested offline. Built for DJs & sound systems.
     <p>© 2026 SK Pro Speakers · SK Electronics Kolkata</p>
   </div>
 </footer>
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".hero-dots .dot");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    current = index;
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => showSlide(index));
+  });
+
+  setInterval(() => {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }, 5000);
+</script>
 
 </body>
 </html>
