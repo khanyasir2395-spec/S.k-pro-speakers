@@ -1355,7 +1355,7 @@ p { color: var(--text-soft); }
     top: 70px;
     right: 0;
     width: 220px;
-    background: #111;
+    background: #e90e0e;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -1375,7 +1375,7 @@ p { color: var(--text-soft); }
 
   .navbar {
     padding: 12px 5%;
-    background: #0d0d0d;
+    background: #d40b0b;
   }
 
   .logo {
