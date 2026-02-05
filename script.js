@@ -34,3 +34,9 @@ function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, 5000);
 }
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
