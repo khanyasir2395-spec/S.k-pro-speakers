@@ -23,6 +23,10 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="btn">Contact</a></li>
     </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+  ☰
+</div>
+
   </nav>
  <header class="hero hero-slider">
 
@@ -354,6 +358,12 @@
   }, 5000);
 </script>
 
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu")
+    .classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
