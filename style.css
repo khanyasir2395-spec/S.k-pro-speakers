@@ -1327,19 +1327,22 @@ p { color: var(--text-soft); }
   }
 
 }
-/* HAMBURGER ICON */
+/* =========================
+   MOBILE NAVBAR
+   ========================= */
+
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: #fff;
 }
 
-/* MOBILE MENU */
+/* Mobile */
 @media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
-    color: #fff;
   }
 
   .nav-links {
@@ -1347,22 +1350,17 @@ p { color: var(--text-soft); }
     top: 70px;
     right: 0;
     width: 220px;
-    background: #1c1f24;
+    background: #111;
     flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    display: none;
-    border-radius: 10px 0 0 10px;
-  }
+    gap: 18px;
 
-  .nav-links li {
-    margin-bottom: 14px;
-  }
-
-  .nav-links a {
-    font-size: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
   }
 
   .nav-links.active {
-    display: flex;
+    transform: translateX(0);
   }
 }

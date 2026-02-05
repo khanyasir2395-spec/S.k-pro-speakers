@@ -16,19 +16,24 @@
     <!-- HERO SECTION -->
  <header class="hero">
   <nav class="navbar">
-    <div class="logo">S.K.PRO SPEAKERS</div>
-<div class="menu-toggle" onclick="toggleMenu()">
-  ☰
-</div>
-    <ul class="nav-links">
-      <li><a href="#products">Products</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="btn">Contact</a></li>
-    </ul>
-    
-<script src="script.js"></script>
 
-  </nav>
+  <!-- LOGO -->
+  <div class="logo">S.K.PRO SPEAKERS</div>
+
+  <!-- MENU -->
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#products">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="btn">Contact</a></li>
+  </ul>
+
+  <!-- 3 DOTS -->
+  <div class="menu-toggle" id="menuToggle">
+    &#8942;
+  </div>
+
+</nav>
+
  <header class="hero hero-slider">
 
   <div class="hero-slide active" style="background-image:url('assets/images/skpro-hero.jpg')">
@@ -358,13 +363,16 @@
     showSlide(next);
   }, 5000);
 </script>
-
 <script>
-function toggleMenu() {
-  document.getElementById("mobileMenu")
-    .classList.toggle("active");
-}
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 </script>
+
+
 
 </body>
 </html>
