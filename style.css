@@ -55,14 +55,6 @@ body {
   color: #fff;
 }
 
-/* HERO FULL IMAGE */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: url("assets/images/skpro-hero.jpg") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-}
 
 /* DARK OVERLAY */
 .hero-overlay {
@@ -1270,13 +1262,14 @@ p { color: var(--text-soft); }
 .btn.primary { background: var(--accent); }
 
 :root {
-  --bg-main: #0b0f14;
-  --bg-section: #111827;
-  --card-bg: #1f2933;
+  --bg-main: #0e0e0e;
+  --bg-section: #151515;
+  --card-bg: #1d1d1d;
   --text-main: #ffffff;
-  --text-soft: #c7d2da;
-  --accent: #3b82f6;
+  --text-soft: #cccccc;
+  --accent: #ff7a00;
 }
+
 
 body { background: var(--bg-main); color: var(--text-main); }
 section { background: var(--bg-section); }
@@ -1329,15 +1322,14 @@ p { color: var(--text-soft); }
   }
 
 }
-/* =========================
-   MOBILE NAVBAR
-   ========================= */
+/* MOBILE NAVBAR FIX */
 
 .menu-toggle {
   display: none;
   font-size: 26px;
   cursor: pointer;
   color: #fff;
+  z-index: 999;
 }
 
 /* Mobile */
@@ -1348,18 +1340,19 @@ p { color: var(--text-soft); }
   }
 
   .nav-links {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0;
     right: 0;
-    width: 220px;
-    background: #e90e0e;
+    height: 100vh;
+    width: 240px;
+    background: #111;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 18px;
+    padding: 90px 25px;
+    gap: 22px;
 
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    z-index: 998;
   }
 
   .nav-links.active {
