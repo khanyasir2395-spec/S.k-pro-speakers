@@ -26,54 +26,23 @@
       <li><a href="contact.html" class="btn">Contact</a></li>
     </ul>
 
-    <!-- HAMBURGER -->
-    <div class="menu-toggle" id="menuToggle">
-      ☰
-    </div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
 
   </nav>
 
-  <!-- SLIDES -->
-
-  <div class="hero-slide active" style="background-image:url('assets/images/skpro-hero.jpg')">
+  <!-- SLIDE 1 -->
+  <div class="hero-slide active"
+       style="background-image:url('assets/images/skpro-hero.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
         <h1>Powerful Sound.<br>Professional Performance.</h1>
-        <p>Built for DJs, sound owners, and event professionals.</p>
+        <p>Built for DJs & sound businesses.</p>
       </div>
     </div>
   </div>
 
-  <div class="hero-slide" style="background-image:url('assets/images/dancing1.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Strong Bass.<br>Clean Output.</h1>
-        <p>Tested speakers with real-world performance.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-slide" style="background-image:url('assets/images/dancing2.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Made for Business.</h1>
-        <p>Bulk supply with consistent sound quality.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-slide" style="background-image:url('assets/images/village4.jpg')">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Trusted Offline.</h1>
-        <p>Live demo and testing at our Kolkata store.</p>
-      </div>
-    </div>
-  </div>
+  <!-- ADD OTHER SLIDES SAME -->
 
   <!-- DOTS -->
   <div class="hero-dots">
@@ -84,6 +53,7 @@
   </div>
 
 </header>
+
 
 
 
@@ -365,13 +335,18 @@
   }, 5000);
 </script>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
+
+});
 </script>
+
 
 
 

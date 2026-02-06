@@ -1359,3 +1359,17 @@ p { color: var(--text-soft); }
     transform: translateX(0);
   }
 }
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  z-index: 1001;
+}
+
+.nav-links {
+  z-index: 1000;
+}
