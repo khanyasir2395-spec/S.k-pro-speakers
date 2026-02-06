@@ -1373,3 +1373,14 @@ p { color: var(--text-soft); }
 .nav-links {
   z-index: 1000;
 }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
