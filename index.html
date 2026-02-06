@@ -13,20 +13,29 @@
 <body>
 
   
-    <!-- HERO SECTION -->
- <header class="hero">
+ <header class="hero-slider">
+
+  <!-- NAVBAR -->
   <nav class="navbar">
+
     <div class="logo">S.K.PRO SPEAKERS</div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#products">Products</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="btn">Contact</a></li>
     </ul>
-  </nav>
- <header class="hero hero-slider">
 
-  <div class="hero-slide active" style="background-image:url('assets/images/skpro1-hero.jpg')">
+    <!-- HAMBURGER -->
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+  </nav>
+
+  <!-- SLIDES -->
+
+  <div class="hero-slide active" style="background-image:url('assets/images/skpro-hero.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
@@ -66,14 +75,16 @@
     </div>
   </div>
 
+  <!-- DOTS -->
   <div class="hero-dots">
-  <span class="dot active"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-  <span class="dot"></span>
-</div>
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
 </header>
+ 
 
 
 <section class="about-skpro-detail">
@@ -234,8 +245,8 @@
       </a>
 
       </a>
-    <a href="facebook.com/share/Q8va7PDnsNAh1sQS/?mibextid=qi2Omg" target="_blank" class="social facebook">
-      Facebook
+   <a href="facebook.com/share/Q8va7PDnsNAh1sQS/?mibextid=qi2Omg" target="_blank" class="social facebook">
+      facebook
     </a>
     </div>
 
@@ -331,28 +342,34 @@
   </div>
 </footer>
 <script>
-  const slides = document.querySelectorAll(".hero-slide");
-  const dots = document.querySelectorAll(".hero-dots .dot");
-  let current = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".hero-dots .dot");
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+let current = 0;
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-    current = index;
-  }
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => showSlide(index));
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  current = index;
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
   });
+});
 
-  setInterval(() => {
-    let next = (current + 1) % slides.length;
-    showSlide(next);
-  }, 5000);
+setInterval(() => {
+  let next = (current + 1) % slides.length;
+  showSlide(next);
+}, 5000);
 </script>
+
+
+
 
 
 </body>
