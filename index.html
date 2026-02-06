@@ -342,35 +342,30 @@
   </div>
 </footer>
 <script>
-  const slides = document.querySelectorAll(".hero-slide");
-  const dots = document.querySelectorAll(".hero-dots .dot");
-  let current = 0;
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".hero-dots .dot");
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+let current = 0;
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-    current = index;
-  }
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => showSlide(index));
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  current = index;
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
   });
+});
 
-  setInterval(() => {
-    let next = (current + 1) % slides.length;
-    showSlide(next);
-  }, 5000);
-</script>
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+setInterval(() => {
+  let next = (current + 1) % slides.length;
+  showSlide(next);
+}, 5000);
 </script>
 
 
